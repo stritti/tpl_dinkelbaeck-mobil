@@ -1,10 +1,10 @@
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-[![Build Status](https://secure.travis-ci.org/stritti/tpl_bodenleger-stockach.svg?branch=master)](https://travis-ci.org/stritti/tpl_bodenleger-stockach)
-tpl_bodenleger-stockach
+[![Build Status](https://secure.travis-ci.org/stritti/tpl_dinkelbaeck-mobil.svg?branch=master)](https://travis-ci.org/stritti/tpl_dinkelbaeck-mobil)
+tpl_dinkelbaeck-mobil
 =======================
 
-Responsive Joomla! 3.0 Template based on Foundation 5.0 initially designed for
-[Bodenleger Stockach](http://www.bodenleger-stockach.de)
+Responsive Joomla! 3.0 Template 
+[Dinkelbäck-mobil](http://www.dinkelbaeck-mobil.de)
 
 ### Features
  * SEO
@@ -24,16 +24,10 @@ Responsive Joomla! 3.0 Template based on Foundation 5.0 initially designed for
 The template is free to use under the [MIT license](http://www.opensource.org/licenses/mit-license.php).
 
 ### Credits
- * [ZURB Foundation Responsive Library](http://foundation.zurb.com),
-   Free to use under the MIT license ( http://www.opensource.org/licenses/mit-license.php )
- * [jQuery JavaScript Library v2.1.0](http://jquery.com/),
-   Released under the MIT license ( http://jquery.org/license)
- * [jQuery Plugin: jQueryFullscreenCycler](https://github.com/nbunney/jQueryFullscreenCycler)
-   Released under GNU GENERAL PUBLIC LICENSE ( https://github.com/nbunney/jQueryFullscreenCycler/blob/master/LICENSE )
-
+ * 
 
 ### Development
-Full source of template at (https://github.com/stritti/tpl_bodenleger-stockach)
+Full source of template at (https://github.com/stritti/tpl_dinkelbaeck-mobil)
 
 ## Requirements
 You'll need to have the following items installed before continuing.
@@ -49,7 +43,7 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 ## Setup Project
 After installation clone the git repository:
 ```shell
-git clone git@github.com:stritti/tpl_bodenleger-stockach.git
+git clone git@github.com:stritti/tpl_dinkelbaeck-mobil.git
 ```
 
 Then run in same directory following commands:
@@ -76,4 +70,4 @@ While you're working on the project, run:
 `grunt`
 
 
-[![Analytics](https://ga-beacon.appspot.com/UA-327996-12/stritti/tpl_bodenleger-stockach)](https://github.com/igrigorik/ga-beacon)
+[![Analytics](https://ga-beacon.appspot.com/UA-327996-12/stritti/tpl_dinkelbaeck-mobil)](https://github.com/igrigorik/ga-beacon)
