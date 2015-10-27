@@ -1,10 +1,7 @@
 <?php 
 defined('_JEXEC') or die('Restricted access');
 
-$cfg	 = & JEVConfig::getInstance();
-
-
-$cfg = & JEVConfig::getInstance();
+$cfg = JEVConfig::getInstance();
 $option = JEV_COM_COMPONENT;
 $Itemid = JEVHelper::getItemid();
 
@@ -51,11 +48,12 @@ $precedingWeek = $this->datamodel->getPrecedingWeek($this->year, $this->month, $
 			</td>
 		</tr>
 <?php
+$hasevents = false;
 for( $d = 0; $d < 7; $d++ ){
 
 	$num_events	= count($data['days'][$d]['rows']);
 	if ($num_events==0) continue;
-
+        $hasevents = true;
 	$day_link = '<a class="ev_link_weekday" href="' . $data['days'][$d]['link'] . '" title="' . JText::_('JEV_CLICK_TOSWITCH_DAY') . '">'
 	. JEventsHTML::getDateFormat( $data['days'][$d]['week_year'], $data['days'][$d]['week_month'], $data['days'][$d]['week_day'], 2 ).'</a>'."\n";
 
@@ -71,11 +69,7 @@ for( $d = 0; $d < 7; $d++ ){
 
 			$listyle = 'style="border-color:'.$row->bgcolor().';"';
 			echo "<li class='ev_td_li' $listyle>\n";
-			if (!$this->loadedFromTemplate('icalevent.list_row', $row, 0)){
-				$this->viewEventRowNew ( $row);
-				echo "&nbsp;::&nbsp;";
-				$this->viewEventCatRowNew($row);
-			}
+			$this->loadedFromTemplate('icalevent.list_row', $row, 0);
 			echo "</li>\n";
 		}
 		echo "</ul>\n";
@@ -83,5 +77,12 @@ for( $d = 0; $d < 7; $d++ ){
 	echo '</td></tr>' . "\n";
 } // end for days
 
+if (!$hasevents) {
+		echo '<tr><td class="ev_td_right" colspan="3"><ul class="ev_ul" style="list-style: none;">' . "\n";
+		echo "<li class='ev_td_li' style='border:0px;'>\n";
+		echo JText::_('JEV_NO_EVENTS') ;
+		echo "</li>\n";
+		echo "</ul></td></tr>\n";
+}
 ?>
 </table>

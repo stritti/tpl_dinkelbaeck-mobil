@@ -1,10 +1,10 @@
 <?php 
 defined('_JEXEC') or die('Restricted access');
 
-$cfg	 = & JEVConfig::getInstance();
+$cfg	 = JEVConfig::getInstance();
 
 
-$cfg = & JEVConfig::getInstance();
+$cfg = JEVConfig::getInstance();
 $option = JEV_COM_COMPONENT;
 $Itemid = JEVHelper::getItemid();
 
@@ -17,7 +17,7 @@ $view =  $this->getViewName();
 echo $this->loadTemplate('cell' );
 $eventCellClass = "EventCalendarCell_".$view;
 
-if ($cfg->get("tooltiptype",'overlib')=='overlib'){
+if ($cfg->get("tooltiptype",'joomla')=='overlib'){
 	JEVHelper::loadOverlib();
 }
 
@@ -25,7 +25,7 @@ if ($cfg->get("tooltiptype",'overlib')=='overlib'){
 $followingMonth = $this->datamodel->getFollowingMonth($this->data);
 $precedingMonth = $this->datamodel->getPrecedingMonth($this->data);
 
-?>
+    ?>
 <table class="maintable" align="center" cellpadding="0" cellspacing="0" width="100%">
 	<tr>
 		<td class="tableh1" colspan="8">
@@ -46,6 +46,8 @@ $precedingMonth = $this->datamodel->getPrecedingMonth($this->data);
       	<?php if ($precedingMonth) { echo "<a href='".$precedingMonth["link"]."' title='".$precedingMonth['name']."' >"?>
       	<img src="<?php echo $viewimages;?>/mini_arrowleft.gif" alt="<?php echo $precedingMonth['name'];?>" align="middle" border="0" hspace="5"/>
       	<?php echo $precedingMonth['name']."</a>";}?>
+      	
+
 <!-- END previous_month_link_row -->
 			</td>
 			<td colspan="3" class="currentmonth" style="background-color: rgb(208, 230, 246);" align="center" height="22" nowrap="nowrap" valign="middle">

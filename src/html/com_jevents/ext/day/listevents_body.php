@@ -1,13 +1,12 @@
 <?php 
 defined('_JEXEC') or die('Restricted access');
 
-$cfg	 = & JEVConfig::getInstance();
+$cfg	 = JEVConfig::getInstance();
 
 $this->data = $data = $this->datamodel->getDayData( $this->year, $this->month, $this->day );
+$this->Redirectdetail();
 
-$cfg = & JEVConfig::getInstance();
 $Itemid = JEVHelper::getItemid();
-$cfg = & JEVConfig::getInstance();
 $hasevents = false;
 
 // previous and following month names and links
@@ -56,11 +55,7 @@ if (count($data['hours']['timeless']['events'])>0){
 		$listyle = 'style="border-color:'.$row->bgcolor().';"';
 		echo "<li class='ev_td_li' $listyle>\n";
 
-		if (!$this->loadedFromTemplate('icalevent.list_row', $row, 0)){
-			$this->viewEventRowNew ( $row);
-			echo '&nbsp;::&nbsp;';
-			$this->viewEventCatRowNew($row);
-		}
+		$this->loadedFromTemplate('icalevent.list_row', $row, 0);
 		echo "</li>\n";
 	}
 	echo "</ul></td></tr>\n";
@@ -76,17 +71,12 @@ for ($h=0;$h<24;$h++){
 			$listyle = 'style="border-color:'.$row->bgcolor().';"';
 			echo "<li class='ev_td_li' $listyle>\n";
 
-			if (!$this->loadedFromTemplate('icalevent.list_row', $row, 0)){
-				$this->viewEventRowNew ( $row);
-				echo '&nbsp;::&nbsp;';
-				$this->viewEventCatRowNew($row);
-			}
+			$this->loadedFromTemplate('icalevent.list_row', $row, 0);
 			echo "</li>\n";
 		}
 		echo "</ul></td></tr>\n";
 	}
 }
-
 if (!$hasevents) {
 		echo '<tr><td class="ev_td_right" colspan="3"><ul class="ev_ul" style="list-style: none;">' . "\n";
 		echo "<li class='ev_td_li' style='border:0px;'>\n";
@@ -94,7 +84,5 @@ if (!$hasevents) {
 		echo "</li>\n";
 		echo "</ul></td></tr>\n";
 }
-
-
 ?>
 </table>

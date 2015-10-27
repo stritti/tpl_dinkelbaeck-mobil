@@ -4,14 +4,14 @@
 	border-bottom: 1px solid #B4B4B6;
 }
 #extcal_minical .extcal_tiny_add_event_link {
-	font-family: Verdana;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
 	font-size: 9px;
 	font-weight: normal;
 	color:#575767;
 	text-decoration: none;
 }
 #extcal_minical TABLE.extcal_weekdays {
-	background-image: url(../images/bg1.gif);
+	background-image: url(../images/bg1.gif);        
 	background-repeat: repeat-x;
 	border-top: 1px solid #FFFFFF;
 	width:135px;
@@ -32,7 +32,7 @@
 	text-align:center;
 }
 #extcal_minical .extcal_small {
-	font-family: Verdana;
+        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
 	font-size: 9px;
 	color:#575767;
 	text-decoration: none;
@@ -46,7 +46,7 @@
 
 #extcal_minical .extcal_daycell,#extcal_minical .extcal_todaycell,
 #extcal_minical .extcal_sundaycell,#extcal_minical .extcal_othermonth {
-	font-family: "Trebuchet MS", Verdana, Arial, "Microsoft Sans Serif"; 
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
 	font-size: 9px;
 	font-weight: bold;
 	font-style: normal;
@@ -63,6 +63,7 @@
 #extcal_minical .extcal_todaycell {
 	color:#99AAAA;
 	background-image: url(../images/rect.gif);
+        background-size:cover;
 }
 
 #extcal_minical .extcal_sundaycell {
@@ -75,7 +76,7 @@
 
 #extcal_minical .extcal_daylink, #extcal_minical .extcal_sundaylink,
 #extcal_minical .extcal_busylink  {
-	font-family: "Trebuchet MS", Verdana, Arial, "Microsoft Sans Serif"; 
+        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
 	font-size: 9px;
 	font-weight: bold;
 	font-style: normal;
@@ -96,7 +97,7 @@
 }
 
 #extcal_minical .extcal_month_label {
-	font-family: Verdana, Arial, "Microsoft Sans Serif"; 
+        font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
 	font-size: 10px;
 	font-weight: bold;
 	color: #565666;
@@ -108,6 +109,21 @@
   text-align:center;
 }
 
+/* Latest Events */
+.jevbootstrap .mod_events_latest_date , .jevbootstrap .mod_events_latest_content {
+	line-height:14px;
+	margin-top: 1px;
+	vertical-align: text-top;
+}
+.jevbootstrap [class^="icon-"], .jevbootstrap [class*=" icon-"] {
+	margin-right:3px;
+}
 .mod_events_link {
 	cursor:pointer;
+}
+.mod_events_latest_table tr {
+    border-bottom: 1px solid #ccc;
+}
+.mod_events_latest_table td {
+    padding: 3px 0;
 }
