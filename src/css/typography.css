@@ -221,7 +221,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a {
 blockquote {
 	/*font-size: 18px;*/
 	margin-left:25px;
-	margin-right:25px
+	margin-right:25px;
 	font-style:italic;
 	line-height: 19px;
 }

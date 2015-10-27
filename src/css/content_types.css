@@ -597,14 +597,14 @@ form#adminForm {
 /* artikel bilder ------------------------------------*/
 .img-intro-left {
 	float:left;
-	#width:180px;
+	/*width:180px;*/
 	width:280px;
 	margin-right: 10px;
 	margin-bottom: 10px;
 }
 .img-intro-right {
 	float:right;
-	#width:180px;
+	/*width:180px;*/
 	width:280px;
 	margin-left: 10px;
 	margin-bottom: 10px;
