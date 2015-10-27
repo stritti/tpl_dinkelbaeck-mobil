@@ -273,7 +273,7 @@ $templateURL = str_replace('/','_',$this->baseurl."/templates/".$this->template)
 
 <!-- Pulled from http://code.google.com/p/html5shiv/ -->
 <!--[if lt IE 9]>
-	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/html5.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/selectivizr-min.js"></script>
 <![endif]-->
 
