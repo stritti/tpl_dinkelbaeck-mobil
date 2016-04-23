@@ -18,7 +18,7 @@ include_once("prepare_colors.php");
 $templateUrl = str_replace('_','/',$_GET['templateurl']);
 
 
-ereg('MSIE ([0-9].[0-9])',$_SERVER['HTTP_USER_AGENT'],$reg);
+preg_match('MSIE ([0-9].[0-9])',$_SERVER['HTTP_USER_AGENT'],$reg);
 
 if(!isset($reg[1])) { $ieVersion = 'none'; } 
 else {
