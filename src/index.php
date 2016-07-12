@@ -14,13 +14,14 @@ require_once(JPATH_SITE .  '/templates/' .  $this->template . '/system/recolor.p
 $app = JFactory::getApplication();
 $doc = JFactory::getDocument();
 
-$highlights1ModuleCount = $this->countModules('highlights_1_1 + highlights_1_2 + highlights_1_3 + highlights_1_4 + highlights_1_5 + highlights_1_6');
+$highlights1ModuleCount = $this->countModules('highlights_1_1') + this->countModules('highlights_1_2')
+    + this->countModules('highlights_1_3') + this->countModules('highlights_1_4') + this->countModules('highlights_1_5') + this->countModules('highlights_1_6'));
 
-$maincontent1ModuleCount = $this->countModules('maincontent_1_1 + maincontent_1_2 + maincontent_1_3 + maincontent_1_4 + maincontent_1_5 + maincontent_1_6');
+$maincontent1ModuleCount = $this->countModules('maincontent_1_1') + $this->countModules('maincontent_1_2') + $this->countModules('maincontent_1_3') + $this->countModules('maincontent_1_4') + $this->countModules('maincontent_1_5') + $this->countModules('maincontent_1_6'));
 
-$maincontent2ModuleCount = $this->countModules('maincontent_2_1 + maincontent_2_2 + maincontent_2_3 + maincontent_2_4 + maincontent_2_5 + maincontent_2_6');
+$maincontent2ModuleCount = $this->countModules('maincontent_2_1') + $this->countModules('maincontent_2_2') + $this->countModules('maincontent_2_3') + $this->countModules('maincontent_2_4') + $this->countModules('maincontent_2_5') + $this->countModules('maincontent_2_6'));
 
-$footerModuleCount = $this->countModules('footer_1_1 + footer_1_2 + footer_1_3 + footer_1_4 + footer_1_5 + footer_1_6');
+$footerModuleCount = $this->countModules('footer_1_1') + $this->countModules('footer_1_2') + $this->countModules('footer_1_3') + $this->countModules('footer_1_4') + $this->countModules('footer_1_5') + $this->countModules('footer_1_6'));
 
 $contentLeft = 0;
 $contentRight = 0;
@@ -365,7 +366,8 @@ _gaq.push(['_trackPageview']);
             <jdoc:include type="message" />
             
             <!-- ROW HIGHLIGHTS_1 -->
-        <?php if ($this->countModules( 'highlights_1_1 or highlights_1_2 or highlights_1_3 or highlights_1_4 or highlights_1_5 or highlights_1_6' )) : ?>
+        <?php if ($this->countModules( 'highlights_1_1' ) || this->countModules( 'highlights_1_2' ) || this->countModules( 'highlights_1_3' ) ||
+            this->countModules( 'highlights_1_4' ) || this->countModules( 'highlights_1_5' ) || this->countModules( 'highlights_1_6' ) ) : ?>
             <section>
                 <div class="row columnWidth_<?php echo $highlights1ModuleCount ?>">
                     <?php if ($this->countModules( 'highlights_1_1' )) : ?>
@@ -400,7 +402,8 @@ _gaq.push(['_trackPageview']);
             
         <!-- ROW MAINCONTENT_1 -->
 
-     	<?php if ($this->countModules( 'maincontent_1_1 or maincontent_1_2 or maincontent_1_3 or maincontent_1_4 or maincontent_1_5 or maincontent_1_6' )) : ?>
+     	<?php if ($this->countModules( 'maincontent_1_1' ) || $this->countModules( 'maincontent_1_2' ) || $this->countModules( 'maincontent_1_3' )
+     	    || $this->countModules( 'maincontent_1_4' ) || $this->countModules( 'maincontent_1_5' ) || $this->countModules( 'maincontent_1_6' )  : ?>
                 <section>
                 <div class="row columnWidth_<?php echo $maincontent1ModuleCount ?>">
                     <?php if ($this->countModules( 'maincontent_1_1' )) : ?>
@@ -456,7 +459,8 @@ _gaq.push(['_trackPageview']);
  		<!-- END LEFT / COMPONENT CONTENT / RIGHT -->
             
             <!-- ROW MAINCONTENT_2 -->
-        <?php if ($this->countModules( 'maincontent_2_1 or maincontent_2_2 or maincontent_2_3 or maincontent_2_4 or maincontent_2_5 or maincontent_2_6' )) : ?>
+     	<?php if ($this->countModules( 'maincontent_2_1' ) || $this->countModules( 'maincontent_2_2' ) || $this->countModules( 'maincontent_2_3' )
+     	    || $this->countModules( 'maincontent_2_4' ) || $this->countModules( 'maincontent_2_5' ) || $this->countModules( 'maincontent_2_6' )  : ?>
                 <section>
                 <div class="row columnWidth_<?php echo $maincontent2ModuleCount ?>">
                     <?php if ($this->countModules( 'maincontent_2_1' )) : ?>
@@ -497,7 +501,8 @@ _gaq.push(['_trackPageview']);
                     <div class="footerShadow">
                         <div class="footerDeko"></div>
                     </div>
-                    <?php if ($this->countModules( 'footer_1_1 or footer_1_2 or footer_1_3 or footer_1_4 or footer_1_5 or footer_1_6' )) : ?>
+                    <?php if ($this->countModules( 'footer_1_1' || $this->countModules( 'footer_1_2' || $this->countModules( 'footer_1_3'
+                        || $this->countModules( 'footer_1_4' || $this->countModules( 'footer_1_5' || $this->countModules( 'footer_1_6'  : ?>
                     <section>
                         <div class="row columnWidth_<?php echo $footerModuleCount ?>">
                             <?php if ($this->countModules( 'footer_1_1' )) : ?>
