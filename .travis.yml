@@ -24,10 +24,12 @@ before_script:
 - npm install grunt-contrib-clean --save-dev
 script:
 - grunt build --verbose
+
 deploy:
   provider: releases
   api_key:
     secure: o20xy1LRw1o8UB4TV9kcY+QDqQVrBXVsZZamSlRphajhNslwlpoWHmuUoMCOddMMFmCGY43wwYcgkt/lypSEiRTfcB+wcEf3aul0EhX9L1gAK/blllh4CT3Lv/Q2QyX1N09rQlLrgLR6aPTZt1fcT/URUmz7xEz314rZRC5aoA6oGtNnWPk/b78x8VK0jeUrQAk/sQ+7aGvz9fihBk2nvgtDJmBcP0XpzRM+7wACewWM1mE7HLVD9vKtR6wCPZ80dlzTMkmC8/e22pnRObKj2BaQM5GU/Fj5N8BnbYY2QiwrjrXT7YfflDxl03m5VWiPABuAlWnPQeXmWzRfvjkhNj5kSOwXIxHaWvUnjEwyyz+H1xSiUSKFHP9XuDrnYtRzPKZmN2l5KIkgEOIn1fb6sj20mHzcxrY+yAYwJMOEhnhalevTuE7WOuvorI9mTupsgVaaUpt6nxpAYod3SXywsxvapLRDzW5dmUo8JbGyK1YhVunvBk+hRSe2s7McvqIq1LUWNv1G/f2T2kMqINr4BCfQF7g/zCNx1h97xCofzCviIAiW8bBUxAQXrRaydoustUFxDpdUMiF+A94uo951QJ3k0iTYSxkKzLnAl5/0PBUx+qAu+cDTrbFAbBfTVnSvezv2wYS9nVH8DnRo8yL2UJbCc55vz6yc/on6sGYkxBA=
   file: target/tpl_dinkelbaeck-mobil.zip
+  skip_cleanup: true
 on:
     tags: true
