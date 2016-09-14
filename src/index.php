@@ -293,6 +293,7 @@ $templateURL = str_replace('/','_',$this->baseurl."/templates/".$this->template)
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', '<?php echo $this->params->get('google_analytic_tracking-id', 'UA-35451204-1');?>', 'auto');
+  ga('require', 'linkid');
   ga('send', 'pageview');
 // ]]></script>
 
